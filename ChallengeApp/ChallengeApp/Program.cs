@@ -70,4 +70,4 @@ Console.WriteLine("Supervisor Summary: ");
 Console.WriteLine($"--> Average: {statisticsSupervisor.Average}");
 Console.WriteLine($"--> Average grade as letter: {statisticsSupervisor.AverageLetter}");
 Console.WriteLine($"--> Min: {statisticsSupervisor.Min}");
-Console.WriteLine($"--> Max: {statisticsSupervisor.Max}"););
+Console.WriteLine($"--> Max: {statisticsSupervisor.Max}");
