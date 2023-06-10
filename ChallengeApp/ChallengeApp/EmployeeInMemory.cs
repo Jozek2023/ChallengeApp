@@ -2,14 +2,15 @@
 {
     public class EmployeeInMemory : EmployeeBase
     {
-        public override event GradeAddedDelegate GradeAdded;
-
+     
         private List<float> grades = new List<float>();
 
         public EmployeeInMemory(string name, string surname)
             : base(name, surname)
         {
         }
+
+        public override event GradeAddedDelegate GradeAdded;
 
         public override void AddGrade(float grade)
         {
@@ -70,7 +71,7 @@
 
         public override void AddGrade(double grade)
         {
-            grade = Math.Round(grade, 2);
+           
             float valueDouble = (float)grade;
             this.AddGrade(valueDouble);
         }
@@ -79,6 +80,11 @@
         {
             float valueLong = (float)grade;
             this.AddGrade(valueLong);
+        }
+        public override void AddGrade(int grade)
+        {
+            float gradeAsInt = grade;
+            this.AddGrade(gradeAsInt);
         }
 
         public override Statistics GetStatistics()
@@ -120,5 +126,12 @@
             }
             return statistics;
         }
+
+       
+
+        //public override char AddGrade(char grade)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

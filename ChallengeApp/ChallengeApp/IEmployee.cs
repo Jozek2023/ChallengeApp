@@ -1,4 +1,5 @@
-﻿using static ChallengeApp.EmployeeBase;
+﻿using System.Security.Cryptography;
+using static ChallengeApp.EmployeeBase;
 
 namespace ChallengeApp
 {
@@ -13,6 +14,7 @@ namespace ChallengeApp
         void AddGrade(string grade);
 
         void AddGrade(double grade);
+        void AddGrade(int grade);
 
         void AddGrade(long grade);
 

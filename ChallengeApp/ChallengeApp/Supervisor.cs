@@ -97,11 +97,16 @@
             }
         }
 
+       
         public override void AddGrade(double grade)
         {
-            grade = Math.Round(grade, 2);
             float valueDouble = (float)grade;
             this.AddGrade(valueDouble);
+        }
+        public override void AddGrade(int grade)
+        {
+            float gradeAsInt = grade;
+            this.AddGrade(gradeAsInt);
         }
 
         public override void AddGrade(long grade)
@@ -146,5 +151,7 @@
             }
             return statistics;
         }
+
+        
     }
 }
